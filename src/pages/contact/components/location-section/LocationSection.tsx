@@ -3,8 +3,10 @@ import SectionTitle from "@/components/section/SectionTitle";
 
 const LocationSection = () => {
   return (
-    <SectionContainer className="text-center">
-      <SectionTitle caption="Location">We Are Located At</SectionTitle>
+    <SectionContainer className="text-center ">
+      <SectionTitle caption="Location" className="text-center margin-auto">
+        We Are Located At
+      </SectionTitle>
       <section>
         <iframe
           src="https://www.google.com/maps/embed?pb=..."

@@ -7,7 +7,7 @@ type PageProps = {
 };
 
 const PageContainer = ({ children, className }: PageProps) => {
-  return <div className={twMerge("flex flex-col gap-y-8 bg-red-100", className)}>{children}</div>;
+  return <div className={twMerge("flex flex-col gap-y-8", className)}>{children}</div>;
 };
 
 export default PageContainer;

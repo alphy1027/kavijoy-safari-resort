@@ -15,7 +15,7 @@ type ServicesDataTypes = {
 export const services: ServicesDataTypes[] = [
   {
     title: "Wedding Venues & after party locations",
-    link: "/services",
+    link: "weddings",
     image: "https://",
     icon: <WeddingIcon />,
     description:
@@ -23,7 +23,7 @@ export const services: ServicesDataTypes[] = [
   },
   {
     title: "Family & Kids Amusement",
-    link: "/services",
+    link: "family-and-kids-amusement",
     image: "https://",
     icon: <FamilyIcon />,
     description:
@@ -31,7 +31,7 @@ export const services: ServicesDataTypes[] = [
   },
   {
     title: "Authentic Local Cuisines",
-    link: "/services",
+    link: "local-cuisines",
     image: "https://",
     icon: <FoodIcon />,
     description:
@@ -39,7 +39,7 @@ export const services: ServicesDataTypes[] = [
   },
   {
     title: "Team Building  & Corporate Retreats",
-    link: "/services",
+    link: "corporate",
     image: "https://",
     icon: <TeamBuildingIcon />,
     description:

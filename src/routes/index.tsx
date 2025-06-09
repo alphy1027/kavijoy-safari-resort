@@ -8,6 +8,7 @@ const MainLayout = lazy(() => import("@/layouts/MainLayout"));
 const HomePage = lazy(() => import("@/pages/home/HomePage"));
 const AboutPage = lazy(() => import("@/pages/about/AboutPage"));
 const ServicesPage = lazy(() => import("@/pages/services/ServicesPage"));
+const ServicePage = lazy(() => import("@/pages/services/ServicePage"));
 const ContactPage = lazy(() => import("@/pages/contact/ContactPage"));
 const NotFound = lazy(() => import("@/pages/notfound/NotFound"));
 
@@ -37,11 +38,20 @@ const router = createBrowserRouter(
           </Suspense>
         }
       />
+
       <Route
         path="services"
         element={
           <Suspense fallback={<Loader />}>
             <ServicesPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="services/:id"
+        element={
+          <Suspense fallback={<Loader />}>
+            <ServicePage />
           </Suspense>
         }
       />
