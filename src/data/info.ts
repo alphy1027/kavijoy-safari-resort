@@ -1,4 +1,4 @@
-const info = {
+export const info = {
   location: import.meta.env.VITE_APP_LOCATION,
   email: import.meta.env.VITE_APP_EMAIL,
   phone: import.meta.env.VITE_APP_PHONE,
@@ -8,5 +8,3 @@ const info = {
   tiktok: import.meta.env.VITE_APP_TIKTOK,
   twitter: import.meta.env.VITE_APP_TWITTER,
 };
-
-export default info;

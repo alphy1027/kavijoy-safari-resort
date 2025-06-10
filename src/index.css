@@ -86,6 +86,7 @@ body {
   --radius-lg: 16px;
 
   --font-family-heading: "Oswald", sans-serif;
+  --font-family-caption: "Kaushan Script", cursive;
 }
 
 @utility color-primary {

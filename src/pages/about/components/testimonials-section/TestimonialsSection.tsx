@@ -25,8 +25,8 @@ const TestimonialsSection = () => {
         ))}
       </section>
       <div className="flex items-center gap-x-4 pt-12">
-        <Button size="sm" variant="outline" leftIcon={<ArrowLeftIcon />} />
-        <Button size="sm" variant="outline" rightIcon={<ArrowRightIcon />} />
+        <Button variant="outline" leftIcon={<ArrowLeftIcon />} />
+        <Button variant="outline" rightIcon={<ArrowRightIcon />} />
       </div>
     </SectionContainer>
   );

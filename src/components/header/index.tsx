@@ -19,7 +19,7 @@ const Header = () => {
           <Button size="sm" className="hidden lg:block">
             Book Now
           </Button>
-          <Button variant="outline" rightIcon={<MenuIcon />} className="border-none p-2"></Button>
+          <Button variant="outline" rightIcon={<MenuIcon />} className="border-none p-2 lg:hidden"></Button>
         </div>
         <NavBar />
       </SectionContainer>

@@ -12,7 +12,7 @@ const HomepageAboutUsSection = () => {
         </figure>
         <div className="lg:absolute rounded-sm top-1/2 right-[10%] lg:-translate-y-1/2 flex-col flex gap-y-6 py-6 lg:py-14 px-4 lg:px-6 lg:bg-primary lg:w-[380px] xl:[434px]">
           <div className="flex flex-col w-fit ">
-            <p className="text-body-sm color-secondary">About Us</p>
+            <p className="text-body-sm color-secondary font-family-caption tracking-wide">About Us</p>
             <h2 className="font-semibold tracking-wide uppercase text-heading-base font-family-heading color-background">
               A Destination Made for <br /> Moments That Matter
             </h2>

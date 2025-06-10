@@ -6,7 +6,7 @@ const TestimonialCard = ({ image, testimonial, name }: Testimonial) => {
   return (
     <div className="bg-primary gap-y-2 max-w-[536px] xl:max-w-[636px] relative flex flex-col pb-14 items-center p-4 rounded-sm">
       <QuoteIcon />
-      <BodyText variant="sage" className="text-center">
+      <BodyText variant="sage" className="text-center tracking-wide font-family-caption">
         {testimonial}
       </BodyText>
 
@@ -15,7 +15,7 @@ const TestimonialCard = ({ image, testimonial, name }: Testimonial) => {
           <img src={image} alt="" className="w-14 h-14 bg-accent rounded-full" />
           <figcaption className="sr-only">{name}</figcaption>
         </figure>
-        <p className="color-foreground text-body-sm font-medium">{name}</p>
+        <p className="color-foreground font-semibold font-family-caption tracking-wide">{name}</p>
       </div>
     </div>
   );
