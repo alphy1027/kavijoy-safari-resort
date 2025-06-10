@@ -12,7 +12,7 @@ const MainLayout = () => {
       <main className="flex-1">
         <Outlet />
         <SectionContainer className="py-16">
-          <div className="bg-blue-900 px-4 py-6 rounded-sm flex flex-col gap-4 items-center justify-center">
+          <div className="bg-primary px-4 py-6 rounded-sm flex flex-col gap-4 items-center justify-center">
             <h4 className="color-secondary text-heading-sm font-semibold">
               Ready to experience Kavijoy Safari Resort?
             </h4>

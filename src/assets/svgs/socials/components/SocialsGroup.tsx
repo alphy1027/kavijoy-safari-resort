@@ -12,7 +12,7 @@ type SocialsProps = {
 
 const SocialsGroup = ({ size, className }: SocialsProps) => {
   return (
-    <nav className="flex gap-x-3 items-center">
+    <nav className="flex gap-x-4 items-center">
       <Link to="contact-us">
         <WhatsappIcon size={size} className={className} />
       </Link>

@@ -6,11 +6,13 @@ import FaqSection from "../contact/components/faqsection/components/FaqSection";
 import ServicesSection from "../services/components/service-card/ServicesSection";
 import HomepageAboutUsSection from "./components/about-us-section/HomepageAboutUsSection";
 import HeroSection from "./components/HeroSection";
+import IntroSection from "./components/IntroSection";
 
 const HomePage = () => {
   return (
     <PageContainer>
       <HeroSection />
+      <IntroSection />
       <HomepageAboutUsSection />
       <ServicesSection />
       <WhyChooseUs />

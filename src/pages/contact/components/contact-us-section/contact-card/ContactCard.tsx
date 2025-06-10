@@ -14,22 +14,19 @@ const ContactCard = () => {
     <SectionContainer>
       <div className="py-10">
         <SectionTitle caption="Contact Us">Get in touch with us</SectionTitle>
-        <BodyText className="md:text-left text-center md:w-2/4">
+        <BodyText className="max-w-[568px]">
           Send us a message in case of any enquiry and we’ll get back to you as soon as possible. We are eager to get
           your feedback and make our services better to make your experiences better.
         </BodyText>
       </div>
-      <section
-        className="margin-auto border max-w-[918px] grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 grid-rows-2 border-secondary rounded-sm overflow-hidden"
-        style={{ marginInline: "auto" }}
-      >
+      <section className="margin-auto md:border max-w-[918px] grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 grid-rows-2 border-secondary rounded-sm overflow-hidden">
         <div className="sm:px-10 px-4 row-span-2 md:row-span-1 col-span-2 flex justify-center items-center">
           <ContactForm />
         </div>
 
         <div className="bg-primary md:px-8 gap-y-10 flex-1 flex flex-col justify-between px-4 pt-8 pb-4 items-center">
           <SubTitle>Contact Information</SubTitle>
-          <div className="flex flex-col gap-y-[1px] min-w-fit bg-accent">
+          <div className="flex flex-col gap-y-[1px] bg-accent">
             <AddressInfo icon={<LocationIcon />}>Upper Kombewa, Kisumu City</AddressInfo>
             <AddressInfo icon={<PhoneIcon />}>+254 722250809</AddressInfo>
             <AddressInfo icon={<EmailIcon />}>Kavijoyresort@gmail.com</AddressInfo>
