@@ -2,6 +2,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import { Suspense, lazy } from "react";
 import Loader from "@/components/Loader/Loader";
 import ErrorBoundary from "@/components/ErrorBoundary/ErrorBoundary";
+import ServicesLayout from "@/layouts/ServicesLayout";
 
 //lazy-loaded components
 const MainLayout = lazy(() => import("@/layouts/MainLayout"));
@@ -43,19 +44,28 @@ const router = createBrowserRouter(
         path="services"
         element={
           <Suspense fallback={<Loader />}>
-            <ServicesPage />
+            <ServicesLayout />
           </Suspense>
         }
-      />
-      <Route
-        path="services/:id"
-        element={
-          <Suspense fallback={<Loader />}>
-            <ServicePage />
-          </Suspense>
-        }
-      />
+      >
+        <Route
+          index
+          element={
+            <Suspense fallback={<Loader />}>
+              <ServicesPage />
+            </Suspense>
+          }
+        />
 
+        <Route
+          path=":id"
+          element={
+            <Suspense fallback={<Loader />}>
+              <ServicePage />
+            </Suspense>
+          }
+        />
+      </Route>
       <Route
         path="contact-us"
         element={

@@ -50,6 +50,17 @@ body {
 .margin-auto {
   margin: auto;
 }
+/* EMBLA CAROUSEL */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
 
 @theme {
   /* COLOR */

@@ -4,7 +4,7 @@ import type { Testimonial } from "@/data/testimonials";
 
 const TestimonialCard = ({ image, testimonial, name }: Testimonial) => {
   return (
-    <div className="bg-primary gap-y-2 max-w-[536px] xl:max-w-[636px] relative flex flex-col pb-14 items-center p-4 rounded-sm">
+    <div className="embla__slide bg-primary gap-y-2 max-w-[536px] xl:max-w-[636px] relative flex flex-col pb-14 items-center p-4 rounded-sm">
       <QuoteIcon />
       <BodyText variant="sage" className="text-center tracking-wide font-family-caption">
         {testimonial}

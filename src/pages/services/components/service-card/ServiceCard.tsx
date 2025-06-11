@@ -1,6 +1,7 @@
 import ArrowRightIcon from "@/assets/svgs/actions/ArrowRightIcon";
 import SectionContainer from "@/components/section/SectionContainer";
 import BodyText from "@/components/UI-primitives/BodyText";
+import LinkButton from "@/components/UI-primitives/LinkButton";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
@@ -40,12 +41,9 @@ const ServiceCard = ({ icon, title, description, index, link }: ServiceProps) =>
           <h3 className="color-primary font-semibold max-w-[380px] text-xl">{title}</h3>
         </div>
         <BodyText>{description}</BodyText>
-        <Link
-          to={link}
-          className="flex items-center gap-x-4 w-fit py-2 color-primary uppercase text-body-base font-semibold hover:underline hover:scale-105 transition-all duration-200 ease-in"
-        >
-          Learn More <ArrowRightIcon />
-        </Link>
+        <LinkButton to={link} className="color-primary">
+          Learn More
+        </LinkButton>
       </article>
     </SectionContainer>
   );

@@ -12,8 +12,8 @@ const FooterNavSection = () => {
             key={navLink.link}
             to={navLink.path}
             className={({ isActive }) =>
-              `hover:scale-105 transition-all text-body-sm duration-200 ease-in color-secondary ${
-                isActive ? "underline scale-105 font-semibold" : ""
+              `hover:scale-105 transition-all text-body-sm duration-200 ease-in color-accent ${
+                isActive ? "scale-105 font-semibold" : ""
               }`
             }
           >

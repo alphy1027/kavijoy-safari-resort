@@ -5,7 +5,7 @@ const FooterContact = ({ children, icon }: { icon: ReactNode; children: ReactNod
   return (
     <div className="flex gap-x-2 items-center">
       {icon}
-      <BodyText variant="champagne" size="sm">
+      <BodyText variant="sage" size="sm">
         {children}
       </BodyText>
     </div>
