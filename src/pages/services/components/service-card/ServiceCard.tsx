@@ -1,9 +1,7 @@
-import ArrowRightIcon from "@/assets/svgs/actions/ArrowRightIcon";
 import SectionContainer from "@/components/section/SectionContainer";
 import BodyText from "@/components/UI-primitives/BodyText";
 import LinkButton from "@/components/UI-primitives/LinkButton";
 import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
 
 type ServiceProps = {
   icon: ReactNode;
