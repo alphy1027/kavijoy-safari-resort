@@ -29,21 +29,17 @@ const ServicePage = () => {
       </section>
       <SectionContainer className="flex flex-col justify-between gap-y-14">
         <section className="flex justify-between sm:flex-col md:flex-row gap-8">
-          <div className="md:w-3/4 sm:w-[100%]">
+          <div className="md:w-[60%] sm:w-[100%]">
             {" "}
             <SectionTitle>{service.title}</SectionTitle>
-            <BodyText className="w-3/4">{service.description}</BodyText>
+            <BodyText>{service.description}</BodyText>
           </div>
-          <div className="flex flex-col gap-4 md:w-1/4 sm:w-[100%]">
+          <div className="flex flex-col gap-2 md:w-[40%] sm:w-[100%] ">
             <div className="bg-primary w-[100%] h-30"></div>
             <div className="bg-primary w-[100%] h-30"></div>
             <div className="bg-primary w-[100%] h-30"></div>
           </div>
         </section>
-        <figure className="w-[100%] bg-primary h-72">
-          <img src={service.image} alt={service.title} className="max-w-[100%]" />
-          <figcaption>{service.title}</figcaption>
-        </figure>
       </SectionContainer>
     </PageContainer>
   );

@@ -31,7 +31,7 @@ const ContactForm = () => {
   const [submitted, setSubmitted] = useState<boolean>(false);
 
   useEffect(() => {
-    emailjs.init("sqlVEIsWI5psNTm43"); // Public key
+    emailjs.init("o0JrlkxA356FNTfaT"); // Public key
   }, []);
 
   const validate = (): FormErrors => {
@@ -61,8 +61,8 @@ const ContactForm = () => {
 
     if (!formRef.current) return;
 
-    const serviceID = "service_tcsdoci";
-    const templateID = "template_3sk466f";
+    const serviceID = "service_kgk72zk";
+    const templateID = "template_pcywj4s";
 
     emailjs
       .sendForm(serviceID, templateID, formRef.current)

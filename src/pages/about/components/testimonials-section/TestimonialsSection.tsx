@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
 
       <div className="embla py-2 px-4 flex flex-col items-center">
         <div ref={emblaRef} className="embla__viewport">
-          <section className="embla__container gap-x-4 pt-6 pb-14">
+          <section className="embla__container gap-x-2 pt-6 pb-14">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard
                 selectedIndex={selectedIndex}

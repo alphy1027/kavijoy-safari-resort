@@ -5,8 +5,16 @@ import NavBar from "./components/NavBar";
 import Title from "../UI-primitives/Title";
 import Button from "../UI-primitives/Button";
 import MenuIcon from "@/assets/svgs/actions/MenuIcon";
+import { useState } from "react";
+import SideBar from "../SideBar";
 
 const Header = () => {
+  const [openSideBar, setOpenSideBar] = useState<boolean>(false);
+
+  const toggleSideBar = () => {
+    setOpenSideBar(!openSideBar);
+  };
+
   return (
     <header className="flex flex-col">
       <HeaderContactSection />
@@ -19,8 +27,14 @@ const Header = () => {
           <Button size="sm" className="hidden lg:block">
             Book Now
           </Button>
-          <Button variant="outline" rightIcon={<MenuIcon />} className="border-none p-2 lg:hidden"></Button>
+          <Button
+            variant="outline"
+            rightIcon={<MenuIcon />}
+            className="border-none p-2 lg:hidden"
+            onClick={toggleSideBar}
+          ></Button>
         </div>
+        {openSideBar && <SideBar openSideBar={openSideBar} closeSideBar={() => setOpenSideBar(false)} />}
         <NavBar />
       </SectionContainer>
     </header>
