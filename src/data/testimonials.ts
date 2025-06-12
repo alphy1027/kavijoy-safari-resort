@@ -1,8 +1,8 @@
-export type Testimonial = {
+export interface Testimonial {
   image: string;
   testimonial: string;
   name: string;
-};
+}
 
 export const testimonials: Testimonial[] = [
   {

@@ -2,9 +2,18 @@ import QuoteIcon from "@/assets/svgs/about/QuoteIcon";
 import BodyText from "@/components/UI-primitives/BodyText";
 import type { Testimonial } from "@/data/testimonials";
 
-const TestimonialCard = ({ image, testimonial, name }: Testimonial) => {
+interface CardProps extends Testimonial {
+  selectedIndex: number;
+  index: number;
+}
+
+const TestimonialCard = ({ image, testimonial, name, selectedIndex, index }: CardProps) => {
   return (
-    <div className="embla__slide bg-primary gap-y-2 max-w-[536px] xl:max-w-[636px] relative flex flex-col pb-14 items-center p-4 rounded-sm">
+    <div
+      className={`embla__slide ${
+        selectedIndex === index ? "bg-primary" : "bg-transparent border-2 scale-80 border-secondary"
+      } transition-all duration-200 ease-in-out  gap-y-2 max-w-[536px] xl:max-w-[636px] relative flex flex-col pb-14 items-center p-4 rounded-sm`}
+    >
       <QuoteIcon />
       <BodyText variant="sage" className="text-center tracking-wide font-family-caption">
         {testimonial}
@@ -15,7 +24,13 @@ const TestimonialCard = ({ image, testimonial, name }: Testimonial) => {
           <img src={image} alt="" className="w-14 h-14 bg-accent rounded-full" />
           <figcaption className="sr-only">{name}</figcaption>
         </figure>
-        <p className="color-foreground font-semibold font-family-caption tracking-wide">{name}</p>
+        <p
+          className={`${
+            selectedIndex === index ? "color-foreground" : "color-accent"
+          } font-semibold font-family-caption tracking-wide`}
+        >
+          {name}
+        </p>
       </div>
     </div>
   );
