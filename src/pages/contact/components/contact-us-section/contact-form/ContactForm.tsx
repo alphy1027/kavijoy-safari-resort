@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, FormEvent, ChangeEvent } from "react";
+import { useState, useRef, useEffect, type FormEvent, type ChangeEvent } from "react";
 import emailjs from "@emailjs/browser";
 
 import SubTitle from "@/components/section/SubTitle";
@@ -76,7 +76,7 @@ const ContactForm = () => {
         console.error("Failed to send email:", error);
       });
   };
-
+  console.log(submitted);
   return (
     <form ref={formRef} className="flex flex-col py-8 w-full gap-y-6 max-w-[466px]" onSubmit={handleSubmit}>
       <SubTitle className="color-foreground">Send us a message</SubTitle>

@@ -32,7 +32,7 @@ const ContactCard = () => {
             <AddressInfo icon={<EmailIcon />}>Kavijoyresort@gmail.com</AddressInfo>
           </div>
 
-          <SocialsGroup className="fill-accent" />
+          <SocialsGroup size={24} className="fill-accent" />
         </div>
       </section>
     </SectionContainer>
