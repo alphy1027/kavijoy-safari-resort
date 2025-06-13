@@ -4,7 +4,7 @@ type SidebarProps = {
   closeSidebar: () => void;
 };
 
-const SideBar = ({ closeSidebar }: SidebarProps) => {
+const Sidebar = ({ closeSidebar }: SidebarProps) => {
   return (
     //Sidebar overlay, wrapper to both the backdrop and the sidebar
     <div className="fixed inset-0 z-40 lg:hidden">
@@ -13,4 +13,4 @@ const SideBar = ({ closeSidebar }: SidebarProps) => {
   );
 };
 
-export default SideBar;
+export default Sidebar;
