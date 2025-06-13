@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { ScrollToTop } from "@/components/ScrollTop/ScrollToTop";
 import PageCtaContainer from "@/components/section/PageCtaContainer";
 import SideBar from "@/components/sidebar";
 import { AnimatePresence } from "framer-motion";
@@ -15,6 +16,7 @@ const MainLayout = () => {
     <div className="flex flex-col min-h-screen w-full">
       <AnimatePresence>{isSidebarOpen && <SideBar closeSidebar={closeSidebar} />}</AnimatePresence>
       <Header isSidebarOpen={isSidebarOpen} openSidebar={openSidebar} closeSidebar={closeSidebar} />
+      <ScrollToTop />
       <main className="flex-1">
         <Outlet />
         <PageCtaContainer />

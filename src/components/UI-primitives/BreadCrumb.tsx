@@ -3,10 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const Breadcrumb = () => {
   const location = useLocation();
-  const paths = location.pathname.split("/").filter(Boolean); // removes empty strings
+  const paths = location.pathname.split("/").filter(Boolean);
 
   return (
-    <nav className="text-sm ">
+    <nav className="">
       <ol className="flex justify-center items-center space-x-2  text-background">
         <li>
           <Link to="/" className="hover:text-primary font-medium">

@@ -1,17 +1,15 @@
-import Breadcrumb from "@/components/UI-primitives/BreadCrumb";
-import HeroImage from "@/assets/images/heroimage.avif";
 import ServicesSection from "./components/service-card/ServicesSection";
 import PageContainer from "@/components/section/PageContainer";
+import { getRouteImages } from "@/routes/routeImages";
+import Banner from "@/components/section/Banner";
 
 const ServicesPage = () => {
+  const [BannerImage] = getRouteImages("/services");
   return (
     <PageContainer>
-      <section className=" bg-cover bg-center h-[90vh]" style={{ backgroundImage: `url(${HeroImage})` }}>
-        <div className="flex flex-col items-center justify-center gap-y-6 p-12">
-          <span className=" text-center text-background  font-semibold ">Services</span>
-          <Breadcrumb />
-        </div>
-      </section>
+      <Banner image={BannerImage} title="Services">
+        {""}
+      </Banner>
 
       <ServicesSection />
     </PageContainer>
