@@ -2,7 +2,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ScrollToTop } from "@/components/ScrollTop/ScrollToTop";
 import PageCtaContainer from "@/components/section/PageCtaContainer";
-import SideBar from "@/components/sidebar/Sidebar";
+import Sidebar from "@/components/sidebar/Sidebar";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
@@ -14,7 +14,7 @@ const MainLayout = () => {
 
   return (
     <div className="flex flex-col min-h-screen w-full">
-      <AnimatePresence>{isSidebarOpen && <SideBar closeSidebar={closeSidebar} />}</AnimatePresence>
+      <AnimatePresence>{isSidebarOpen && <Sidebar closeSidebar={closeSidebar} />}</AnimatePresence>
       <Header isSidebarOpen={isSidebarOpen} openSidebar={openSidebar} closeSidebar={closeSidebar} />
       <ScrollToTop />
       <main className="flex-1">
