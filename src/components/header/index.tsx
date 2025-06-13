@@ -5,16 +5,15 @@ import NavBar from "./components/NavBar";
 import Title from "../UI-primitives/Title";
 import Button from "../UI-primitives/Button";
 import MenuIcon from "@/assets/svgs/actions/MenuIcon";
-import { useState } from "react";
-import SideBar from "../SideBar";
+import CloseIcon from "@/assets/svgs/actions/CloseIcon";
 
-const Header = () => {
-  const [openSideBar, setOpenSideBar] = useState<boolean>(false);
+type HeaderProps = {
+  openSidebar: () => void;
+  isSidebarOpen: boolean;
+  closeSidebar: () => void;
+};
 
-  const toggleSideBar = () => {
-    setOpenSideBar(!openSideBar);
-  };
-
+const Header = ({ openSidebar, isSidebarOpen, closeSidebar }: HeaderProps) => {
   return (
     <header className="flex flex-col">
       <HeaderContactSection />
@@ -23,18 +22,26 @@ const Header = () => {
           <div className="hidden md:block">
             <SocialsGroup size={20} className="fill-foreground" />
           </div>
-          <Title />
+          <Title className="color-primary" />
           <Button size="sm" className="hidden lg:block">
             Book Now
           </Button>
-          <Button
-            variant="outline"
-            rightIcon={<MenuIcon />}
-            className="border-none p-2 lg:hidden"
-            onClick={toggleSideBar}
-          ></Button>
+          {isSidebarOpen ? (
+            <Button
+              variant="outline"
+              rightIcon={<CloseIcon />}
+              className="border-none p-2 lg:hidden"
+              onClick={closeSidebar}
+            />
+          ) : (
+            <Button
+              variant="outline"
+              rightIcon={<MenuIcon />}
+              className="border-none p-2 lg:hidden"
+              onClick={openSidebar}
+            />
+          )}
         </div>
-        {openSideBar && <SideBar openSideBar={openSideBar} closeSideBar={() => setOpenSideBar(false)} />}
         <NavBar />
       </SectionContainer>
     </header>

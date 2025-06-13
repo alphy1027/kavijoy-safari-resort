@@ -1,28 +1,23 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import SectionContainer from "@/components/section/SectionContainer";
-import BodyText from "@/components/UI-primitives/BodyText";
-import Button from "@/components/UI-primitives/Button";
+import PageCtaContainer from "@/components/section/PageCtaContainer";
+import SideBar from "@/components/sidebar";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+  const closeSidebar = () => setIsSidebarOpen(false);
+  const openSidebar = () => setIsSidebarOpen(true);
+
   return (
     <div className="flex flex-col min-h-screen w-full">
-      <Header />
+      <AnimatePresence>{isSidebarOpen && <SideBar closeSidebar={closeSidebar} />}</AnimatePresence>
+      <Header isSidebarOpen={isSidebarOpen} openSidebar={openSidebar} closeSidebar={closeSidebar} />
       <main className="flex-1">
         <Outlet />
-        <SectionContainer className="py-16">
-          <div className="bg-primary px-4 py-6 rounded-sm flex flex-col gap-4 items-center justify-center">
-            <h4 className="color-secondary text-heading-sm font-semibold">
-              Ready to experience Kavijoy Safari Resort?
-            </h4>
-            <BodyText variant="cream" className="max-w-[550px] text-center">
-              Plan your next event, escape, or family outing by the lake. We’re here to make every moment unforgettable
-              — let’s make it happen together.
-            </BodyText>
-            <Button variant="secondary">Book Now</Button>
-          </div>
-        </SectionContainer>
+        <PageCtaContainer />
       </main>
       <Footer />
     </div>

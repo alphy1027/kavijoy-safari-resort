@@ -9,7 +9,7 @@ import PageContainer from "@/components/section/PageContainer";
 
 const AboutPage = () => {
   return (
-    <PageContainer className="flex flex-col gap-y-40 overflow-x-hidden">
+    <PageContainer className="flex flex-col overflow-x-hidden">
       <section className=" bg-cover bg-center h-[90vh]" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="flex flex-col items-center justify-center gap-y-6 p-12">
           <span className=" text-center text-background  font-semibold ">About Us</span>
