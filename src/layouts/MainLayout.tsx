@@ -2,7 +2,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ScrollToTop } from "@/components/ScrollTop/ScrollToTop";
 import PageCtaContainer from "@/components/section/PageCtaContainer";
-import Sidebar from "@/components/sidebar/Sidebar";
+import Sidebar from "@/components/side-bar/Sidebar";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
