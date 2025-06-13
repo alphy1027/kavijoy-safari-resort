@@ -20,7 +20,9 @@ const Banner = ({ image, title, height = "90vh" }: BannerProps) => {
     >
       <div className="absolute inset-0" />
       <div className="relative z-10 flex flex-col items-center gap-y-4 text-center">
-        {title && <h1 className="text-4xl font-bold">{title}</h1>}
+        {title && (
+          <h1 className="text-heading-xl font-family-heading color-primary max-w-[250px] font-bold">{title}</h1>
+        )}
         <Breadcrumb />
       </div>
     </section>

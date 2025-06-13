@@ -1,6 +1,5 @@
 import PageContainer from "@/components/section/PageContainer";
 import SectionContainer from "@/components/section/SectionContainer";
-import Breadcrumb from "@/components/UI-primitives/BreadCrumb";
 import SectionTitle from "@/components/section/SectionTitle";
 import BodyText from "@/components/UI-primitives/BodyText";
 import { Link, useParams } from "react-router-dom";

@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
   }, [emblaApi]);
 
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center overflow-hidden">
       <SectionTitle caption="Testimonials" className="flex flex-col items-center">
         {" "}
         What Our Clients Are Saying
