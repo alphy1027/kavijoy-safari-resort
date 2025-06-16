@@ -12,7 +12,7 @@ const TestimonialCard = ({ image, testimonial, name, selectedIndex, index }: Car
     <div
       className={`embla__slide ${
         selectedIndex === index ? "bg-primary" : "bg-transparent border-2 scale-80 border-secondary"
-      } transition-all duration-200 ease-in-out  gap-y-2 max-w-[536px] xl:max-w-[636px] relative flex flex-col pb-14 items-center p-4 rounded-sm`}
+      } transition-all duration-200 ease-in-out gap-y-2 max-w-[536px] xl:max-w-[636px] relative flex flex-col pb-14 items-center p-4 rounded-sm`}
     >
       <QuoteIcon />
       <BodyText variant="sage" className="text-center tracking-wide font-family-caption">

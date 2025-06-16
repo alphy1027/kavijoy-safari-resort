@@ -17,7 +17,7 @@ const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }: FAQItemPr
   };
 
   return (
-    <div className="border border-secondary rounded-sm transition-all duration-300">
+    <div className="border border-foreground rounded-sm transition-all duration-300">
       <button onClick={toggle} className="w-full flex p-4 justify-between items-center text-left">
         <BodyText className="font-medium">{question}</BodyText>
         <div className={`transition-all duration-75 ease-in-out ${isOpen ? "rotate-180" : ""}`}>

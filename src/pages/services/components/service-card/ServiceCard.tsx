@@ -24,7 +24,11 @@ const ServiceCard = ({ icon, title, description, index, link }: ServiceProps) =>
       >
         <div
           className={`bg-accent absolute top-0 bottom-0
-        ${reverse ? " -right-10 md:-right-20 xl:-right-30 left-0" : " right-0 -left-10 md:-left-20 xl:-left-30"}`}
+        ${
+          reverse
+            ? " -right-10 md:-right-20 xl:-right-30 left-0 rounded-l-sm"
+            : "rounded-r-sm right-0 -left-10 md:-left-20 xl:-left-30"
+        }`}
         />
         <figcaption className="sr-only">Kavijoy services image</figcaption>
       </figure>

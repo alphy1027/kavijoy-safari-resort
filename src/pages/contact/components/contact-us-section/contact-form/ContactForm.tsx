@@ -79,7 +79,7 @@ const ContactForm = () => {
   console.log(submitted);
   return (
     <form ref={formRef} className="flex flex-col py-8 w-full gap-y-6 max-w-[466px]" onSubmit={handleSubmit}>
-      <SubTitle className="color-foreground">Send us a message</SubTitle>
+      <SubTitle className="color-primary">Send us a message</SubTitle>
 
       <div className="flex flex-col gap-y-3">
         <Input
@@ -98,13 +98,18 @@ const ContactForm = () => {
           placeholder="Enter your email"
         />
         {/* Use a native textarea if your Input doesn't support multiline */}
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Enter your message"
-          className="h-[100px] p-3 border border-gray-300 rounded-md resize-none"
-        />
+        <div className="">
+          <label htmlFor="message" className="text-body-base font-semibold color-foreground">
+            Message:
+          </label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Enter your message"
+            className="h-[100px] w-full p-3 border border-slate-400 rounded-sm resize-none"
+          />
+        </div>
         {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
       </div>
 

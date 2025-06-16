@@ -6,10 +6,10 @@ interface BannerProps {
   image: string;
   title?: string;
   children?: ReactNode;
-  height?: string; // e.g. '90vh', '60vh'
+  height?: string; 
 }
 
-const Banner = ({ image, title, height = "90vh" }: BannerProps) => {
+const Banner = ({ image, title, height = "86vh" }: BannerProps) => {
   return (
     <section
       className="relative bg-cover bg-center w-full flex justify-center py-30 text-white"

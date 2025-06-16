@@ -19,7 +19,7 @@ const asideVariants: Variants = {
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 0.4,
+      duration: 0.3,
       staggerChildren: 0.2,
       when: "beforeChildren",
     },
@@ -76,7 +76,7 @@ const Aside = ({ closeSidebar }: SideBarProps) => {
             to={navLink.path}
             onClick={closeSidebar}
             className={({ isActive }) =>
-              `py-4 px-6 font-semibold uppercase text-xl font-family-heading tracking-widest ${
+              `py-4 px-6 font-semibold uppercase text-heading-sm font-family-heading tracking-widest ${
                 isActive ? "color-secondary" : "color-accent"
               }`
             }

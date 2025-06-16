@@ -1,3 +1,4 @@
+import FixedActionLinks from "@/components/fixed-action-links/FixedActionLinks";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ScrollToTop } from "@/components/ScrollTop/ScrollToTop";
@@ -13,7 +14,8 @@ const MainLayout = () => {
   const openSidebar = () => setIsSidebarOpen(true);
 
   return (
-    <div className="flex flex-col min-h-screen w-full">
+    <div className="relative flex flex-col min-h-screen w-full">
+      <FixedActionLinks />
       <AnimatePresence>{isSidebarOpen && <Sidebar closeSidebar={closeSidebar} />}</AnimatePresence>
       <Header isSidebarOpen={isSidebarOpen} openSidebar={openSidebar} closeSidebar={closeSidebar} />
       <ScrollToTop />

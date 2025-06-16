@@ -23,9 +23,7 @@ const Header = ({ openSidebar, isSidebarOpen, closeSidebar }: HeaderProps) => {
             <SocialsGroup size={20} className="fill-foreground" />
           </div>
           <Title className="color-primary" />
-          <Button size="sm" className="hidden lg:block">
-            Book Now
-          </Button>
+          <Button className="hidden lg:block">Book Now</Button>
           {isSidebarOpen ? (
             <Button
               variant="outline"

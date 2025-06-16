@@ -9,11 +9,11 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 const Input = forwardRef<HTMLInputElement, InputProps>(({ label, className, ...props }, ref) => {
   return (
     <div className="flex flex-col gap-1">
-      {label && <label className="text-sm font-medium text-gray-700">{label}</label>}
+      {label && <label className="text-body-base font-semibold color-foreground">{label}</label>}
       <input
         ref={ref}
         className={twMerge(
-          "px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition duration-200",
+          "px-4 py-2 border border-slate-400 rounded-sm outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200",
           className
         )}
         {...props}

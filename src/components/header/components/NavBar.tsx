@@ -9,7 +9,7 @@ const NavBar = () => {
           key={navLink.link}
           to={navLink.path}
           className={({ isActive }) =>
-            `hover:scale-105 transition-all tracking-wider py-2 font-medium font-family-heading px-4 uppercase duration-200 ease-in ${
+            `hover:scale-105 transition-all tracking-widest py-2 font-medium text-heading-sm font-family-heading px-4 uppercase duration-200 ease-in ${
               isActive ? "color-primary" : "color-foreground"
             }`
           }

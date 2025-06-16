@@ -6,16 +6,12 @@ import FaqSection from "../contact/components/faqsection/components/FaqSection";
 import HomepageAboutUsSection from "./components/about-us-section/HomepageAboutUsSection";
 import IntroSection from "./components/IntroSection";
 import HomeServicesSection from "./components/home-services-section/HomeServicesSectiion";
-import { getRouteImages } from "@/routes/routeImages";
-import Banner from "@/components/section/Banner";
+import HeroSection from "@/components/hero/HeroSection";
 
 const HomePage = () => {
-  const [HeroImage] = getRouteImages("/");
   return (
     <PageContainer>
-      <Banner image={HeroImage} title="Not just a stay- a story.">
-        {""}
-      </Banner>
+      <HeroSection isSlider />
       <IntroSection />
       <HomepageAboutUsSection />
       <HomeServicesSection />

@@ -11,7 +11,7 @@ import SubTitle from "@/components/section/SubTitle";
 const ServicePage = () => {
   const { id } = useParams();
   const service = services.find((s) => s.link === id);
-  const [BannerImage] = getRouteImages("services /:id");
+  const [BannerImage] = getRouteImages("/services/:id");
 
   if (!service) {
     return (
