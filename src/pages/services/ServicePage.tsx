@@ -28,7 +28,7 @@ const ServicePage = () => {
         {""}
       </Banner>
       <SectionContainer className="flex flex-col justify-between gap-y-14">
-        <section className="flex justify-between sm:flex-col md:flex-row gap-8">
+        <section className="flex justify-between sm:flex-col md:flex-row">
           <div className="md:w-[60%] sm:w-[100%]">
             {" "}
             <SectionTitle>{service.title}</SectionTitle>
