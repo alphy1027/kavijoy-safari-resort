@@ -6,7 +6,7 @@ import ActionWhatsappIcon from "./components/svg/ActionWhatsappIcon";
 
 const FixedActionLinks = () => {
   return (
-    <nav className="bg-primary lg:max-w-[500px] p-2 bottom-0 divide-accent divide-x left-0 right-0 fixed z-40 flex gap-x-2 justify-around items-center">
+    <nav className="bg-primary border border-background lg:max-w-[500px] p-2 bottom-0 divide-accent divide-x left-0 right-0 fixed z-40 flex gap-x-2 justify-around items-center">
       <ActionLink to={info.email} icon={<ActionEmailIcon />}>
         Email Us
       </ActionLink>
