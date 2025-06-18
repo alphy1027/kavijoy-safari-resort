@@ -19,7 +19,7 @@ const HeroSection = ({ isSlider = false, image, children }: HeroProps) => {
           <figcaption className="sr-only">Kavijoy scenery photo</figcaption>
         </figure>
       )}
-      <div className="absolute top-1/2 left-1/2 rounded-sm -translate-x-1/2 -translate-y-full">{children}</div>
+      <div className="absolute left-1/2 top-[6%] rounded-sm -translate-x-1/2">{children}</div>
     </div>
   );
 };
